@@ -71,7 +71,7 @@ enable_wineandroid_drv=no
 --without-xxf86vm
 --enable-archs=i386,aarch64,arm64ec
 "
-# TODO: `--enable-archs=arm` doesn't build with option `--with-mingw=clang`, but
+# TODO: `--enable-archs=arm` doesn't build with option `--with-mingw=clang`, buts
 # TODO: `arm64ec` doesn't build with option `--with-mingw` (arm64ec-w64-mingw32-clang)
 
 _setup_llvm_mingw_toolchain() {
