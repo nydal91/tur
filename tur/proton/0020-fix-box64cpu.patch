@@ -57,10 +57,10 @@ index 081ecf9..894e3b6 100644
      {
      case IMAGE_FILE_MACHINE_I386:
 -        RtlInitUnicodeString( &nameW, L"\\Registry\\Machine\\Software\\Microsoft\\Wow64\\x86" );
--        ret = (native_machine == IMAGE_FILE_MACHINE_ARM64 ? L"libwow64fex.dll" : L"wow64cpu.dll");
+-        ret = (native_machine == IMAGE_FILE_MACHINE_ARM64 ? L"libwow64fex.dll" : L"wowbox64.dll");
 -        break;
 +        if (native_machine == IMAGE_FILE_MACHINE_ARM64)
-+            return L"box64cpu.dll";
++            return L"wowbox64.dll";
 +        return L"wow64cpu.dll";
      case IMAGE_FILE_MACHINE_ARMNT:
          RtlInitUnicodeString( &nameW, L"\\Registry\\Machine\\Software\\Microsoft\\Wow64\\arm" );
